@@ -11,7 +11,8 @@ GitGrabber is a tool designed to help you easily clone GitHub repositories.
 To install GitGrabber, run the following command:
 
 ```sh
-
+git clone git@github.com:Subhransu-De/git-grabber.git
+cd git-grabber
 uv sync
 ```
 
