@@ -1,0 +1,8 @@
+indent-width = 4
+line-length = 120
+exclude = [".git/*", ".vscode/*", ".venv/*", "venv/*", "output/*"]
+
+[format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "auto"
