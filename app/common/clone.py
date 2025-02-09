@@ -18,7 +18,7 @@ def clone(username: str, repos: List[Repository]) -> None:
             )
         else:
             print(f'{Fore.BLUE}Cloning: {Style.RESET_ALL}{repo.name} into {repo_path}')
-            Repo.clone_from(repo.ssh, repo_path, progress=CloneProgress())
+            Repo.clone_from(repo.url, repo_path, progress=CloneProgress())
             print('\r', end='')
             print(f'{Fore.GREEN}Cloned: {Style.RESET_ALL}{repo.name} into {repo_path}')
 

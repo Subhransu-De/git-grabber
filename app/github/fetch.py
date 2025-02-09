@@ -13,8 +13,8 @@ def fetch_repositories(username: str) -> List[Repository]:
                 data = response.read()
                 repos = json.loads(data)
                 return [
-                    Repository(name=repo['name'], ssh=repo['ssh_url'])
-                    for repo in [repo for repo in repos if 'ssh_url' and 'name' in repo]
+                    Repository(name=repo['name'], url=repo['clone_url'])
+                    for repo in [repo for repo in repos if 'clone_url' and 'name' in repo]
                 ]
             else:
                 exit(f'Failed to retrieve repositories: {response.status}')
