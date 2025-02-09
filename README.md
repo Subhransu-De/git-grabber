@@ -21,7 +21,7 @@ uv sync
 To use GitGrabber, run the following command:
 
 ```sh
-uv run app <username>
+uv run app <username/organization_name>
 ```
 
 For a list of available commands, use:
