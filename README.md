@@ -21,6 +21,10 @@ uv sync
 To use GitGrabber, run the following command:
 
 ```sh
+docker run --rm -v "$PWD/output:/app/output" subhransude/gitgrabber
+```
+
+```sh
 uv run app <username/organization_name>
 ```
 
