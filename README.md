@@ -21,11 +21,11 @@ uv sync
 To use GitGrabber, run the following command:
 
 ```sh
-uv run gitgrabber <username>
+uv run app <username>
 ```
 
 For a list of available commands, use:
 
 ```sh
-uv run gitgrabber --help
+uv run app --help
 ```
