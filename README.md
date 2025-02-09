@@ -4,7 +4,7 @@ GitGrabber is a tool designed to help you easily clone GitHub repositories.
 
 ## Features
 
-- Clone all repositories of an github user
+- Clone all repositories of an github user or organization
 
 ## Installation
 
