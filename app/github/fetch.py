@@ -16,7 +16,9 @@ def fetch_repositories(username: str) -> List[Repository]:
                     for repo in [
                         repo
                         for repo in repos
-                        if ('clone_url' and 'name' in repo) and (repo['fork'] is False) and (repo['size'] > 0)
+                        if all(key in repo for key in ['clone_url', 'name', 'default_branch', 'fork', 'size'])
+                        and not repo['fork']
+                        and repo['size'] > 0
                     ]
                 ]
             else:
