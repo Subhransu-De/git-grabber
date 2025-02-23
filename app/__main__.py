@@ -7,6 +7,7 @@ from common import update
 
 
 def setup() -> None:
+    # https://git-scm.com/docs/git-config#Documentation/git-config.txt-safedirectory
     system('git config --global --add safe.directory "*"')
 
 
