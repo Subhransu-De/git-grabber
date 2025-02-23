@@ -1,3 +1,3 @@
-from .clone import clone
+from .update import update
 
-__all__ = ['clone']
+__all__ = ['update']
