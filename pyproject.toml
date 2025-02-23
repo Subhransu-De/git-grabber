@@ -1,12 +1,10 @@
 [project]
 name = "gitgrabber"
 version = "0.1.0"
-description = "Add your description here"
+description = "GitGrabber is a command-line tool that simplifies the process of fetching and cloning all public repositories belonging to a specified GitHub user or organization. "
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = [
-    "colorama>=0.4.6",
-    "gitpython>=3.1.43",
-    "pydantic>=2.10.6",
-    "ruff>=0.8.4",
-]
+dependencies = ["colorama>=0.4.6", "gitpython>=3.1.43", "pydantic>=2.10.6"]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.8.4", "pytest>=6.2.4", "pytest-cov>=2.12.1"]
