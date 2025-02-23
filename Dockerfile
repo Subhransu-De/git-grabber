@@ -10,7 +10,10 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev
 
 FROM python:3.13-slim-bookworm
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 COPY --from=builder --chown=app:app /app /app
 ENV PATH="/app/.venv/bin:$PATH"
 WORKDIR /app
