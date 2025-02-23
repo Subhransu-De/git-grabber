@@ -1,8 +1,13 @@
 import argparse
+from os import system
 from colorama import init
 
 from github import fetch_repositories as gh_fetch_repo
 from common import update
+
+
+def setup() -> None:
+    system('git config --global --add safe.directory "*"')
 
 
 def main() -> None:
@@ -22,4 +27,5 @@ def main() -> None:
 
 if __name__ == '__main__':
     init(autoreset=True)
+    setup()
     main()
