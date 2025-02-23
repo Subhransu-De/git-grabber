@@ -14,7 +14,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends git && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
-COPY --from=builder --chown=app:app /app /app
+COPY --from=builder --chown=app:app /app/app /app/app
+COPY --from=builder --chown=app:app /app/.venv /app/.venv
 ENV PATH="/app/.venv/bin:$PATH"
 WORKDIR /app
 ENTRYPOINT ["python3", "app"]
